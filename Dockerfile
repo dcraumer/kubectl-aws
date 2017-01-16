@@ -6,7 +6,7 @@ LABEL COMPONENT kubectl
 LABEL VERSION stable
 
 RUN apt-get update && \
-	apt-get install -y curl python-pip && \
+	apt-get install -y curl python-pip groff && \
 	curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl && \
 	chmod +x ./kubectl && \
 	mv ./kubectl /usr/local/bin/kubectl && \
