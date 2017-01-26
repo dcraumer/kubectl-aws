@@ -10,7 +10,7 @@ ENV TERRAFORM_VERSION 0.8.4
 ENV ANSIBLE_VERSION 2.2.0.0
 ENV AWSCLI_VERSION 1.11.36
 ENV MARKUPSAFE_VERSION 0.23
-ENV CFFI_VERSION 0.8.6
+ENV CFFI_VERSION 1.9.1
 
 RUN apt-get update && \
 	apt-get install -y curl python-pip python-dev groff unzip libffi-dev libyaml-dev libssl-dev ca-certificates openssh-client jq vim python-netaddr && \
