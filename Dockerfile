@@ -6,14 +6,14 @@ LABEL COMPONENTS "kubectl,aws-cli,ansible,terraform,kops"
 LABEL VERSION stable
 
 ENV KOPS_VERSION 1.5.3
-ENV TERRAFORM_VERSION 0.9.1
-ENV ANSIBLE_VERSION 2.2.0.0
-ENV AWSCLI_VERSION 1.11.36
+ENV TERRAFORM_VERSION 0.9.2
+ENV ANSIBLE_VERSION 2.2.2.0
+ENV AWSCLI_VERSION 1.11.70
 ENV MARKUPSAFE_VERSION 0.23
 ENV CFFI_VERSION 1.9.1
 
 RUN apt-get update && \
-	apt-get install -y curl python-pip python-dev groff unzip libffi-dev libyaml-dev libssl-dev ca-certificates openssh-client jq vim python-netaddr graphviz && \
+	apt-get install -y git curl python-pip python-dev groff unzip libffi-dev libyaml-dev libssl-dev ca-certificates openssh-client jq vim python-netaddr graphviz && \
 	dpkg -r python-pip && easy_install pip && \
 	curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl && \
 	chmod +x ./kubectl && \
